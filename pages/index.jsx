@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-import Page from '../layouts/Page'
+import Page from '../components/layouts/Page'
 import Hero from '../components/hero/Hero'
 import Gallery from '../components/gallery/Gallery'
 import Product from '../components/product/Product'

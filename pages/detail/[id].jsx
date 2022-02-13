@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import Page from '../../layouts/Page'
+import Page from '../../components/layouts/Page'
 
 import DetailPorductSection from '../../components/detail-product/detail-product-section/DetailPorductSection'
 import DetailProductDescription from '../../components/detail-product/detail-product-description/DetailProductDescription'
