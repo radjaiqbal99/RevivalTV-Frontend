@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-import Page from '../../layouts/page'
+import Page from '../../layouts/Page'
 
 import DetailPorductSection from '../../components/detail-product/detail-product-section/DetailPorductSection'
 import DetailProductDescription from '../../components/detail-product/detail-product-description/DetailProductDescription'
@@ -9,16 +9,17 @@ import DetailProductDescriptionSection from '../../components/detail-product/det
 
 const Detail = () => {
 
-  const { query } = useRouter()
+  const { query } = useRouter() ? useRouter() : { query: { id: 'Drone Name' } }
 
   return (
     <>
       <Head>
-        <title >Detail - { query.id?.replace(/-/g,' ')}</title>
+        <link rel="icon" href="/drone-icon.svg"></link>
+        <title >Detail - {query.id?.replace(/-/g, ' ')}</title>
       </Head>
       <Page>
         <section id="detail">
-          <div className="mx-auto max-w-[1440px] px-[30px] xl:px-[150px] py-[36px] xl:py-[100px] space-y-[50px]">
+          <div className="mx-auto min-w-[411px] max-w-[1440px] px-[30px] xl:px-[150px] py-[36px] xl:py-[100px] space-y-[50px]">
             <div className="mx-0 flex flex-col md:flex-row gap-[50px]">
               <DetailPorductSection />
               <DetailProductDescription />

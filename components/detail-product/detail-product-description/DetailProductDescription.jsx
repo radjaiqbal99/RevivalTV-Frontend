@@ -5,7 +5,7 @@ import DetailProductDescriptionFeature from './DetailProductDescriptionFeature'
 
 const DetailProductDescription = () => {
 
-  const { query } = useRouter()
+  const { query } = useRouter() ? useRouter() : { query: { id: 'Drone Name'} }
 
   const featureState = [
     {
@@ -36,7 +36,7 @@ const DetailProductDescription = () => {
         <h1 className='text-soft-black font-semibold text-5xl leading-[72px]'>$ 4.500,00</h1>
         <DetailProductDescriptionFeature items={featureState} />
       </div>
-      <Button className='w-full' goTo="/">ORDER IT NOW</Button>
+      <Button className='w-full' goTo="order">ORDER IT NOW</Button>
     </div>
   )
 }

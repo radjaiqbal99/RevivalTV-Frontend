@@ -61,8 +61,8 @@ const Footer = () => {
   }
 
   return (
-    <footer id="support" className="bg-black mx-0">
-      <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row px-[30px] xl:px-[150px] py-[50px] xl:py-[100px] gap-y-[32px]">
+    <footer id="support" className="bg-black mx-0 min-w-[411px]">
+      <div className="min-w-[411px] max-w-[1440px] mx-auto flex flex-col sm:flex-row px-[30px] xl:px-[150px] py-[50px] xl:py-[100px] gap-y-[32px]">
         <FooterCompanyProfile />
         <div className="flex flex-col sm:flex-row flex-wrap gap-x-[80px] gap-y-[50px]">
           <FooterList title="Explore" items={itemListState['explore']} />

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import PropTypes from 'prop-types'
 
 const HeaderNavigationItems = ({ items }) => {
 
@@ -8,4 +9,9 @@ const HeaderNavigationItems = ({ items }) => {
     </>
   )
 }
+
+HeaderNavigationItems.propTypes = {
+  items : PropTypes.array.isRequired
+}
+
 export default HeaderNavigationItems

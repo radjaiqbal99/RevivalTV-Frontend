@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types'
+
 const ReviewCard = ({ children, cardProfilePicture, cardProfileName, cardProfileJob }) => { 
   return (
-    <div className="w-[354px] h-[250px] rounded-lg box-border border-[1px] border-gray-200 p-[30px] space-y-[10px] sm:space-y-[30px]">
+    <div className="w-[354px] h-[250px] rounded-lg box-border border-[1px] border-gray-200 p-[30px] flex flex-col justify-between">
       <p className="font-light text-soft-black text-base leading-[30px]">{children}</p>
       <div className="flex items-center gap-[30px]">
         <img className="w-[70px]" src={cardProfilePicture} alt="Profile Picture" />
@@ -12,4 +14,19 @@ const ReviewCard = ({ children, cardProfilePicture, cardProfileName, cardProfile
     </div>
   )
 }
+
+ReviewCard.propTypes = {
+  children: PropTypes.string,
+  cardProfilePicture: PropTypes.string,
+  cardProfileName: PropTypes.string,
+  cardProfileJob: PropTypes.string
+}
+
+ReviewCard.defaultProp = {
+  children: 'Example Content',
+  cardProfilePicture: '/hugo-adams.png',
+  cardProfileName: 'Example Name',
+  cardProfileJob: 'Example Job'
+}
+
 export default ReviewCard

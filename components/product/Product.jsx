@@ -2,8 +2,8 @@ import ProductSpesification  from "./ProductSpesification"
 
 const Product = () => {
   return (
-    <section id="product" className="mx-0 bg-gray-100">
-      <div className="max-w-[1440px] mx-auto py-20 px-[30px] xl:px-[150px] flex flex-col lg:flex-row gap-[30px] xl:gap-[80px] ">
+    <section id="product" className="mx-0 min-w-[411px] bg-gray-100">
+      <div className="min-w-[411px] max-w-[1440px] mx-auto py-20 px-[30px] xl:px-[150px] flex flex-col lg:flex-row gap-[30px] xl:gap-[80px] ">
         <div className="flex-none w-[227px] sm:w-[342px] mx-auto lg:w-[280px] xl:w-[342px]">
           <img className="w-full h-auto" src="/drone-light.png" alt="Drone Light Image" />
         </div>

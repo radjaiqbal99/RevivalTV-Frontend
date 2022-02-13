@@ -1,4 +1,5 @@
 import classNames from "classnames"
+import PropTypes from 'prop-types'
 
 const GalleryCard = ({ cardTitle, cardBody, cardBodyStrong, backgroundImage, color }) => {
 
@@ -19,4 +20,19 @@ const GalleryCard = ({ cardTitle, cardBody, cardBodyStrong, backgroundImage, col
     </>
   )
 }
+
+GalleryCard.propTypes = {
+  cardTitle: PropTypes.string,
+  cardBody: PropTypes.string,
+  cardBodyStrong: PropTypes.string,
+  backgroundImage: PropTypes.string.isRequired,
+  color: PropTypes.oneOf(['black','white']).isRequired
+}
+
+GalleryCard.defaultProp = {
+  cardTitle: 'Title',
+  cardBody: 'Content',
+  cardBodyStrong: 'Content Strong',
+}
+
 export default GalleryCard

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Header from './top-menu/Header'
 import Footer from './top-menu/Footer'
 
@@ -7,8 +8,7 @@ const Page = ({ children }) => {
       {/* Header Page*/}
       <Header />
       {/* Content Page */}
-      <main>
-        {/* Slot */}
+      <main className='min-h-[100vh]'>
         { children }
       </main>
       {/* Footer Page */}
@@ -16,4 +16,9 @@ const Page = ({ children }) => {
     </>
   )
 }
+
+Page.propTypes = {
+  children : PropTypes.node
+}
+
 export default Page

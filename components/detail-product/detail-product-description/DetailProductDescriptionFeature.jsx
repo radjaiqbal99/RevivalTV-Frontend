@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const DetailProductDescriptionFeature = ({ items }) => {
   return (
     <div className='flex flex-col gap-y-[25px]'>
@@ -15,4 +17,9 @@ const DetailProductDescriptionFeature = ({ items }) => {
     </div>
   )
 }
+
+DetailProductDescriptionFeature.propTypes = {
+  items: PropTypes.array.isRequired
+}
+
 export default DetailProductDescriptionFeature

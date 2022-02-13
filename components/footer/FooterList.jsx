@@ -1,3 +1,6 @@
+
+import PropTypes from 'prop-types'
+
 import FooterListItem from "./FooterListItem"
 
 const FooterList = ({ title, items }) => {
@@ -10,4 +13,10 @@ const FooterList = ({ title, items }) => {
     </div>
   )
 }
+
+FooterList.propTypes = {
+  title: PropTypes.string.isRequired,
+  items: PropTypes.array.isRequired
+}
+
 export default FooterList

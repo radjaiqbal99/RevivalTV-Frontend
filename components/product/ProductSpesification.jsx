@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const ProductSpesification = ({ children, title }) => {
   return (
     <div className="flex-none w-6/12 sm:w-fit text-center">
@@ -6,4 +8,15 @@ const ProductSpesification = ({ children, title }) => {
     </div>
   )
 }
+
+ProductSpesification.propTypes = {
+  children: PropTypes.node,
+  title: PropTypes.string,
+}
+
+ProductSpesification.defaultProp = {
+  children: <p>Example<br />Children</p>,
+  titile : 'Example Titile'
+}
+
 export default ProductSpesification

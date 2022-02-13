@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
 
-import Page from '../layouts/page'
+import Page from '../layouts/Page'
 import Hero from '../components/hero/Hero'
 import Gallery from '../components/gallery/Gallery'
 import Product from '../components/product/Product'
@@ -13,6 +13,7 @@ const Home = () => {
   return (
     <>
       <Head>
+        <link rel="icon" href="/drone-icon.svg"></link>
         <title>Autodrone</title>
       </Head>
       <Page>
