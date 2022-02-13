@@ -1,11 +1,8 @@
-import { useRouter } from "next/router";
-
 import Button from '../../Button'
 import DetailProductDescriptionFeature from './DetailProductDescriptionFeature'
 
 const DetailProductDescription = () => {
 
-  const { query } = useRouter() ? useRouter() : { query: { id: 'Drone Name'} }
 
   const featureState = [
     {
@@ -30,7 +27,7 @@ const DetailProductDescription = () => {
     <div className='flex-none w-full md:w-[346px] flex flex-col gap-y-[27px]'>
       <div className='mx-0 flex flex-col gap-x-2.5'>
         <div className='flex flex-col'>
-          <h2 className='font-semibold text-soft-black text-[28px] leading-[42px] capitalize'>{query.id?.replace(/-/g,' ')}</h2>
+          <h2 className='font-semibold text-soft-black text-[28px] leading-[42px] capitalize'>Drone Light</h2>
           <p className='font-light text-xl text-soft-black leading-[30px]'>Super fast, easy control drone</p>
         </div>
         <h1 className='text-soft-black font-semibold text-5xl leading-[72px]'>$ 4.500,00</h1>

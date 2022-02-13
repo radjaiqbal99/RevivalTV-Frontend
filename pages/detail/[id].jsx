@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 
 import Page from '../../layouts/Page'
 
@@ -8,14 +7,11 @@ import DetailProductDescription from '../../components/detail-product/detail-pro
 import DetailProductDescriptionSection from '../../components/detail-product/detail-product-description-section/DetailProductDescriptionSection'
 
 const Detail = () => {
-
-  const { query } = useRouter() ? useRouter() : { query: { id: 'Drone Name' } }
-
   return (
     <>
       <Head>
         <link rel="icon" href="/drone-icon.svg"></link>
-        <title >Detail - {query.id?.replace(/-/g, ' ')}</title>
+        <title >Detail - Drone Light</title>
       </Head>
       <Page>
         <section id="detail">
